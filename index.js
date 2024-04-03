@@ -3,7 +3,6 @@ const express = require('express')
 const promptRouter = require('./routes/promptRoute.js')
 
 const app = express()
-
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json())
