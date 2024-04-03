@@ -21,13 +21,13 @@ async function runGeminiProVision(prompt) {
   const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
   const imageParts = [
-    fileToGenerativePart("leatherback.jpg", "image/jpeg"),
+    fileToGenerativePart("public/leatherback.jpg", "image/jpeg"),
   ];
 
   const result = await model.generateContent([prompt, ...imageParts]);
   const response = await result.response;
   const text = response.text();
-  console.log(text);
+  return text;
 }
 
 module.exports = runGeminiProVision;
